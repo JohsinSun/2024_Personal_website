@@ -1,0 +1,477 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+  }
+
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+a{
+  color:black;
+  text-decoration: none;
+}
+
+.navbar{
+  display: flex;
+  margin: 0 auto
+  max-width: 1296px;
+}
+
+.navbar .logo img{
+  padding: 7px;
+  margin-top: 18px;
+}
+
+.navbar .menu{
+  display: flex;
+  justify-content: center;
+  width: 480px;
+  height: 32px;
+  margin: 28px 0px;
+  font-size: 16px;
+  gap:48px;
+  flex: 1;
+}
+
+.menu-toggle-label {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.navbar .menu li {
+  position: relative;
+}
+
+.navbar .menu li::before,
+.navbar .menu li::after,
+.navbar .menu li a::before,
+.navbar .menu li a::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #919191;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navbar .menu li::before {
+  top: -4px;
+  left: -8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.navbar .menu li::after {
+  top: -4px;
+  right: -8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.navbar .menu li a::before {
+  bottom: -4px;
+  left: -8px;
+  border-right: none;
+  border-top: none;
+}
+
+.navbar .menu li a::after {
+  bottom: -4px;
+  right: -8px;
+  border-left: none;
+  border-top: none;
+}
+
+.navbar .menu li:hover::before,
+.navbar .menu li:hover::after,
+.navbar .menu li:hover a::before,
+.navbar .menu li:hover a::after {
+  opacity: 1;
+}
+
+
+.navbar .menu a{
+  margin: 4px 8px;
+  text-decoration: none;
+  color: black;
+  font-family: Noto Sans;
+}
+
+
+.banner{
+  background-size: cover;
+  background-color: #FAFAFA;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-content{
+  max-width: 100%;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 24px;
+  position: relative;
+  padding: 59px 71px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-content h2{
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #1E1E1E;
+  text-align: center;
+}
+
+span.mark{
+  position: relative;
+  z-index:1;
+}
+
+img.mark {
+  position: absolute; 
+  width: 148px;
+  bottom: 0px;
+  right: -15px;
+  z-index: -1;
+  max-width: 100%;
+}
+
+.banner-content::before{
+  content: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true');
+  position: absolute;
+  left: 0px; 
+  top: 0px; 
+}
+
+.banner-content::after{
+  content: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true');
+  position: absolute;
+  right: 0px; 
+  bottom: 0px; 
+}
+
+.banner-experience{
+  display: flex;
+  max-width: 636px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+ul.banner-list{
+  display: flex;
+  text-align: center;
+}
+
+li.banner-list{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.banner-experience h3{
+  color: #5B5B5B;
+}
+
+.banner-experience hr{
+  color: #C1C1C1;
+  width: 24px;
+  border: 2px solid;
+}
+
+.container{
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;  
+  margin-bottom: 120px;
+  padding: 0px 12px;
+}
+
+
+.works-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works-list li{
+  width: calc(50% - 12px);
+}
+
+.works-list img{
+  display: block;
+  width: 636px;
+  border:1px solid #F1F1F1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  margin-top: 80px;
+}
+
+.works-list h2{
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 700;
+  color: #3B3B3B;
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+.works-list p{
+  font-size: 16px;
+  line-height: 24px;
+  color: #919191;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.works-list .works-tags{
+  display: flex;
+  margin-left: 16px;
+}
+
+.works-list .works-tags li{
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3B3B3B;
+  text-align: center;
+  padding: 4px 12px 4px 12px;
+  background-color: #F1F1F1;
+  border-radius: 16px;
+  box-sizing: border-box;
+  margin-right: 16px;
+}
+
+.footer{
+  background-image: url(https://hex2024.worksbyaaron.com/image/footer/footer-bg-lg.webp);
+  background-size: cover;
+  width: full-screen;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 312px;
+  gap: 40px;
+}
+
+.footer_content img{
+  margin-bottom: 24px;
+}
+
+.footer_content p{
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: #3B3B3B;
+}
+
+.footer_content a{
+  font-size: 20px;
+  color: #919191;
+}
+
+.footer_button{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.style1{
+  background-color: #000000;
+  width: 306px;
+  border-radius: 8px;
+  padding: 8px 24px;
+  margin-bottom: 24px;
+}
+
+.style1 a{
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.style2{
+  background-color: #FFFFFF;
+  width: 306px;
+  border-radius: 8px;
+  padding: 8px 24px;
+  margin-bottom: 24px;
+  border: 1px solid #C1C1C1;
+}
+
+.style2 a{
+  color: #3B3B3B;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+
+@media (max-width: 992px) {
+  .navbar{
+    justify-content: space-between;
+  }
+    
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    background-color: white;
+    padding: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+
+  .menu-toggle-label {
+    display: block;
+    position: relative;
+    top: 20px;
+    right: 12px;
+}
+
+#menu-toggle:checked + .menu-toggle-label::before {
+    content: '\2715';
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu-toggle:checked + .menu-toggle-label + .menu {
+    display: flex;
+}
+
+  .banner-content::before {
+    font-size: 64px*64px;
+    display: block;
+    top: -10%;
+    left: 50%;
+  }
+  .banner-content::after {
+    display: none;
+  }  
+
+  .banner-content h2{
+    width: 380px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    font-size: 20px;
+  }
+  
+  .banner-list{
+    min-width: 100%;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom: 80px;
+    flex-direction: column;
+    font-size: 16px;
+  }
+  .works-list{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .works-list li{
+   width: 100%;
+   max-width: 636px; 
+  }
+
+  .footer{
+    display: flex; 
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 40px;
+  }
+
+  .footer_content{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    width: 636px;
+  }
+
+  .footer_button{
+    margin: 0;
+  }
+}
